@@ -94,7 +94,7 @@ void UMenu::OnCreateSession(bool bWasSuccessful)
 
 void UMenu::OnFindSessions(const TArray<FOnlineSessionSearchResult>& SessionResults, bool bWasSuccessful)
 {
-	if (MultiplayerSessionsSubsystem)
+	if (!MultiplayerSessionsSubsystem)
 	{
 		return;
 	}
